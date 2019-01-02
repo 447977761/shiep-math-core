@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shiep.math.core.sys.dao.SysUserDao">
+
+    <resultMap id="BaseResultMap" type="com.shiep.math.core.sys.entity.SysUserDTO">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="math_subject" jdbcType="VARCHAR" property="username"/>
+        <result column="math_type" jdbcType="VARCHAR" property="password"/>
+    </resultMap>
+
+    <select id="getSysUser" resultType="java.lang.String">
+        SELECT password
+        FROM sys_user
+        WHERE
+        username = #{username}
+        AND
+        is_deleted IN ('n','N')
+    </select>
+</mapper>

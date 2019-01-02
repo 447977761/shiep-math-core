@@ -2,6 +2,7 @@ package com.shiep.math.core.subjects.entity;
 
 import com.shiep.math.core.common.entity.PageInfoDTO;
 import lombok.Data;
+import org.springframework.stereotype.Component;
 
 
 /**
@@ -11,6 +12,7 @@ import lombok.Data;
  * @create: 2018-11-25 15:41
  **/
 @Data
+@Component
 public class MathSubjectDTO extends PageInfoDTO {
 
     private Long id;
