@@ -1,14 +1,11 @@
 package com.shiep.math.core;
 
 
-import org.mybatis.spring.annotation.MapperScan;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan({"com.shiep.math.core.subjects.dao",
-             "com.shiep.math.core.TestDao",
-             "com.shiep.math.core.sys.dao"})
 public class CoreApplication {
 
     public static void main(String[] args) {
